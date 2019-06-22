@@ -1,5 +1,9 @@
 # FN-Notify-Infraction
 
+[![Build Status](https://travis-ci.org/radar-pi/fn-notify-infraction.svg?branch=develop)](https://travis-ci.org/radar-pi/fn-notify-infraction)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fe0bce6df756a592b0fe/maintainability)](https://codeclimate.com/github/radar-pi/fn-notify-infraction/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fe0bce6df756a592b0fe/test_coverage)](https://codeclimate.com/github/radar-pi/fn-notify-infraction/test_coverage)
+
 A **Função Notify Infraction** é a função responsável por receber as informações da infração e do veículo e notificar aos usuários do RaDop a informação.
 
 ## Parâmetros

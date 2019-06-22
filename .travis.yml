@@ -5,7 +5,7 @@ python:
   - "3.7"
 env:
   global:
-    - CC_TEST_REPORTER_ID=none
+    - CC_TEST_REPORTER_ID=e235412bc9d0ad188848fa5e5e379ae7b55330020f23768fed726c81d1f5b3b7
 services:
   - docker
 before_install:
