@@ -1,0 +1,7 @@
+# Open FaaS usage and build folders
+template
+build
+
+# Pycache files
+fn-notify-infraction/__pycache__/
+fn-notify-infraction/**/__pycache__/
