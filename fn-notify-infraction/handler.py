@@ -184,9 +184,9 @@ def handle(req):
         package_payload = package['payload']
         package_id = package['id']
         infraction_id = package_payload['infraction_id']
-        infraction_data = package_payload['infraction-data']
-        vehicle_data = package_payload['vehicle-data']
-
+        infraction_data = package_payload['infraction_data']
+        vehicle_data = package_payload['vehicle_data']
+        
         infraction = create_notification(
             infraction_id,
             vehicle_data,

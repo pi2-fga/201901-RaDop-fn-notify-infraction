@@ -18,7 +18,7 @@ Os parâmetros da função fn-notify-infraction seguem o modelo de dados do paco
 
     - **infraction_id**: Identificador da infração no formato UUID (tipo `string`).
 
-    - **infraction-data**: Objeto JSON com as informações de infração (tipo `dict`).
+    - **infraction_data**: Objeto JSON com as informações de infração (tipo `dict`).
 
         - **considered_speed**: Valor da velocidade considerada na infração (tipo `integer`)
 
@@ -30,7 +30,7 @@ Os parâmetros da função fn-notify-infraction seguem o modelo de dados do paco
 
         - **vehicle_speed**: Valor da velocidade capturada do veículo (tipo `integer`)
 
-    - **vehicle-data**: Objeto JSON com as informações do veículo da infração (tipo `dict`).
+    - **vehicle_data**: Objeto JSON com as informações do veículo da infração (tipo `dict`).
 
         - **brand**: Marca do veículo (tipo `string`)
 
@@ -67,14 +67,14 @@ __Exemplo__:
   "id": "e7a62db3-4b36-4573-b688-23317174b40e",
   "payload": {
     "infraction_id": "34e221bf-1f0a-4439-b9bf-4f5f23e16230",
-    "infraction-data": {
+    "infraction_data": {
       "considered_speed": 77,
       "id_radar": 42,
       "infraction": 2,
       "max_allowed_speed": 60,
       "vehicle_speed": 80
     },
-    "vehicle-data": {
+    "vehicle_data": {
       "brand": "FIAT/FIORINO 1.0",
       "chassis": "41647",
       "city": "RIACHAO DO JACUIPE",
@@ -171,13 +171,13 @@ Para utilizá-lo, teste pela interface web no endereço definido, chamar pela CL
 FaaS CLI:
 
 ```shell
-echo $'{\n  "id": "e7a62db3-4b36-4573-b688-23317174b40e",\n  "payload": {\n    "infraction_id": "34e221bf-1f0a-4439-b9bf-4f5f23e16230",\n    "infraction-data": {\n      "considered_speed": 77,\n      "id_radar": 42,\n      "infraction": 2,\n      "max_allowed_speed": 60,\n      "vehicle_speed": 80\n    },\n    "vehicle-data": {\n      "brand": "FIAT/FIORINO 1.0",\n      "chassis": "41647",\n      "city": "RIACHAO DO JACUIPE",\n      "color": "Branca",\n      "date": "15/06/2019 às 14:36:42",\n      "model": "FIAT/FIORINO 1.0",\n      "model_year": "1994",\n      "plate": "JMA1451",\n      "return_code": "0",\n      "return_message": "Sem erros.",\n      "state": "BA",\n      "status_code": "0",\n      "status_message": "Sem restrição",\n      "year": "1994"\n    }\n  },\n  "time": "2019-06-15T17:36:43.702105Z",\n  "type": "notify-infraction-call"\n}' | faas-cli invoke fn-notify-infraction
+echo $'{\n  "id": "e7a62db3-4b36-4573-b688-23317174b40e",\n  "payload": {\n    "infraction_id": "34e221bf-1f0a-4439-b9bf-4f5f23e16230",\n    "infraction_data": {\n      "considered_speed": 77,\n      "id_radar": 42,\n      "infraction": 2,\n      "max_allowed_speed": 60,\n      "vehicle_speed": 80\n    },\n    "vehicle_data": {\n      "brand": "FIAT/FIORINO 1.0",\n      "chassis": "41647",\n      "city": "RIACHAO DO JACUIPE",\n      "color": "Branca",\n      "date": "15/06/2019 às 14:36:42",\n      "model": "FIAT/FIORINO 1.0",\n      "model_year": "1994",\n      "plate": "JMA1451",\n      "return_code": "0",\n      "return_message": "Sem erros.",\n      "state": "BA",\n      "status_code": "0",\n      "status_message": "Sem restrição",\n      "year": "1994"\n    }\n  },\n  "time": "2019-06-15T17:36:43.702105Z",\n  "type": "notify-infraction-call"\n}' | faas-cli invoke fn-notify-infraction
 ```
 
 HTTP-Request:
 
 ```shell
-curl -d $'{\n  "id": "e7a62db3-4b36-4573-b688-23317174b40e",\n  "payload": {\n    "infraction_id": "34e221bf-1f0a-4439-b9bf-4f5f23e16230",\n    "infraction-data": {\n      "considered_speed": 77,\n      "id_radar": 42,\n      "infraction": 2,\n      "max_allowed_speed": 60,\n      "vehicle_speed": 80\n    },\n    "vehicle-data": {\n      "brand": "FIAT/FIORINO 1.0",\n      "chassis": "41647",\n      "city": "RIACHAO DO JACUIPE",\n      "color": "Branca",\n      "date": "15/06/2019 às 14:36:42",\n      "model": "FIAT/FIORINO 1.0",\n      "model_year": "1994",\n      "plate": "JMA1451",\n      "return_code": "0",\n      "return_message": "Sem erros.",\n      "state": "BA",\n      "status_code": "0",\n      "status_message": "Sem restrição",\n      "year": "1994"\n    }\n  },\n  "time": "2019-06-15T17:36:43.702105Z",\n  "type": "notify-infraction-call"\n}' -X POST http://127.0.0.1:8080/function/fn-notify-infraction
+curl -d $'{\n  "id": "e7a62db3-4b36-4573-b688-23317174b40e",\n  "payload": {\n    "infraction_id": "34e221bf-1f0a-4439-b9bf-4f5f23e16230",\n    "infraction_data": {\n      "considered_speed": 77,\n      "id_radar": 42,\n      "infraction": 2,\n      "max_allowed_speed": 60,\n      "vehicle_speed": 80\n    },\n    "vehicle_data": {\n      "brand": "FIAT/FIORINO 1.0",\n      "chassis": "41647",\n      "city": "RIACHAO DO JACUIPE",\n      "color": "Branca",\n      "date": "15/06/2019 às 14:36:42",\n      "model": "FIAT/FIORINO 1.0",\n      "model_year": "1994",\n      "plate": "JMA1451",\n      "return_code": "0",\n      "return_message": "Sem erros.",\n      "state": "BA",\n      "status_code": "0",\n      "status_message": "Sem restrição",\n      "year": "1994"\n    }\n  },\n  "time": "2019-06-15T17:36:43.702105Z",\n  "type": "notify-infraction-call"\n}' -X POST http://127.0.0.1:8080/function/fn-notify-infraction
 ```
 
 Exemplo de saída:
